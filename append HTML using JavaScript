@@ -1,0 +1,25 @@
+
+<div id="test">
+<h1>This is a LinuxHint Tutorial</h1>
+<button onclick="buttonPressed()"> Append Paragraph</button>
+</div>
+
+
+/*Using AdjacentHTML method
+The insertAdjacentHTML() function can also be used to attach HTML code to a div. This method is comes in handy when it comes to appending HTML at some specific place. So it takes two parameters in this method:
+
+The location (in the document) where the code should be inserted (‘afterbegin’, ‘beforebegin’, ‘afterend’, ‘beforeend’).
+afterbegin – right after the HTML element mentioned but inside the tag.
+beforebegin – before the HTML element mentioned
+afterend – after the closing tag of the HTML element
+beforeend – inside the HTML element but before the closing tag
+You must surround the HTML code you wish to add, inside the quotes.*/
+
+<script>
+i=1;
+function buttonPressed() {
+document.getElementById("test").insertAdjacentHTML("beforebegin",
+"<p>Appended " + i + " times Before Div<p>");
+i++;
+}
+</script>
